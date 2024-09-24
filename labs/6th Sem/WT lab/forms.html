@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms</title>
+    <style>
+        label{
+            margin-right: 5px;
+            font-weight: bold;
+        }
+        legend{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body style="margin-left: 30px;">
+    <a href="home page.html">Back</a>
+    <h1 style="text-align: center;">Registration From</h1>
+    <form target="_self" method="GET">
+    <fieldset>
+        <legend>Personal Details</legend>
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" style="margin-right: 30px;">
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name"><br><br>
+        <b>Gender<br></b>
+        <input type="radio" name="Gender"> Male
+        <input type="radio" name="Gender" >Female<br><br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob">
+    </fieldset><br>
+    <fieldset>
+        <legend>Contact Details</legend>
+        <label for="phone">Phone No</label>
+        <input type="number" id="phone"><br><br>
+        <label for="mail">Email</label>
+        <input type="email" id="mail"><br><br>
+    </fieldset><br>
+    <fieldset>
+        <legend>Adderss</legend>
+        <label for="street">Street</label>
+        <input type="text" id="street" style="margin-right: 30px;">
+        <label for="city">City</label>
+        <input type="text" id="city"><br><br>
+        <label for="state">State</label>
+        <input type="text" id="state"><br><br>
+    </fieldset><br>
+    <div style="text-align: center;">
+        <input type="reset" value="Reset" style="font-size: 20px; margin-right: 20px;">
+        <input type="submit" value="Submit" style="font-size: 20px;">
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,6 @@
+dataset<- read_excel("BEPSxls.xlsx")
+mean(dataset$age)
+median(dataset$age)
+summary(dataset)
+hist(dataset$age,main = 'AGE HISTOGRAM')
+plot(dataset$Blair)

@@ -1,0 +1,57 @@
+create or replace package pcg as
+procedure pro1(no in number, name out varchar);
+function fun1(no in number) return varchar2;
+end; 
+
+
+create or replace package body pcg as
+procedure pro1(no in number, name out varchar) is
+begin
+select e_name into name from emp1
+where e_no=no;
+end;
+function fun1(no in number) return varchar2 is
+name varchar2(20);
+begin
+select e_name into name from emp1
+where e_no=no;
+return name;
+end;
+end;
+
+declare 
+a varchar(20);
+b varchar(20);
+n number;
+begin
+pcg.pro1(5,a);
+dbms_output.put_line(a);
+b:=pcg.fun1(6);
+dbms_output.put_line(b);
+end;
+
+
+create table emp1(e_no number(6), e_name varchar(10))
+insert into emp1 values(5,'aditya')
+insert into emp1 values(6,'ankit')
+insert into emp1 values(11,'aman')
+select * from emp1
+drop table emp1
+
+
+declare
+name emp1.e_name%type;
+cursor abc is select e_name from emp1;
+begin
+open abc;
+loop
+fetch abc into name;
+if abc%notfound then
+exit;
+else
+dbms_output.put_line(name);
+end if;
+end loop;
+dbms_output.put_line(abc%rowcount);
+close abc;
+end;

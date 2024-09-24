@@ -1,0 +1,19 @@
+declare
+a number ;
+b number;
+c number;
+function find_max(x in number,y in number) return number is  z  number;
+begin 
+if x>y then
+  z:=x;
+else
+  z:=y;
+end if;
+return z;
+end;
+begin
+  a:=43;
+b:=23;
+c:=find_max(a,b);
+dbms_output.put_line(c);
+end;

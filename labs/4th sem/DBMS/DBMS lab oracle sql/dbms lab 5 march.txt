@@ -1,0 +1,17 @@
+select current_date from dual
+select sysdate from dual
+select systimestamp from dual
+select current_timestamp from dual
+
+create table emp(id number(6), name varchar(10),salary number(6),dob date)
+desc emp
+insert into emp values(12,'ankit',234,'01-JAN-2000')
+insert into emp values(34,'anurag',2466,'19-OCT-1998')
+insert into emp values(47,'jatin',755,'21-MAR-1971')
+select * from emp
+drop table emp
+select extract(month from dob) as month from emp
+select extract(day from dob) from emp
+select extract(year from dob) as year from emp
+select date add(dob,12 months ) from emp                                   //not working
+select period diff ('01-JAN-2000','19-OCT-1998') from dual                 //not working

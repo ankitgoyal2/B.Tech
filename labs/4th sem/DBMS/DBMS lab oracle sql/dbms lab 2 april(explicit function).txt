@@ -1,0 +1,22 @@
+explicit function ->
+
+create or replace function max1(a in number,b in number) return number is temp number(5);
+begin 
+if a>b then
+  temp:=a;
+else
+  temp:=b;
+end if;
+return temp;
+end;
+
+declare
+x number ;
+y number;
+z number;
+begin
+x:=43;
+y:=21;
+z:=max1(x,y);
+dbms_output.put_line(z);
+end;

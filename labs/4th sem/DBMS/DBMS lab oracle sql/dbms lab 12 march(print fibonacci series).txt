@@ -1,0 +1,19 @@
+declare 
+   var1 integer;
+    var2 integer;
+   var3 integer;
+    var integer;
+ begin 
+var1:=0;
+var2:=0;
+var3:=1;
+for var in 1..10
+loop
+dbms_output.put_line(' '||var2);
+var1:=var3;
+var3:=var3+var2;
+var2:=var1;
+end loop;
+
+end;
+

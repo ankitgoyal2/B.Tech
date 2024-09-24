@@ -1,0 +1,20 @@
+select abs(-16) from dual
+select ceil(345.58) from dual
+select floor(345.58) from dual
+select mod(345,4) from dual
+select power(3,4) from dual
+select sign(345.58) from dual
+select round(345.5468,3) from dual
+select sqrt(36) from dual
+select trunc(345.55468,3) from dual
+
+
+select lower('wethjHTYegntn') from dual
+select upper('wethjHTYegntn') from dual
+select concat('wethjHT','Yegntn') from dual
+select initcap('we th jHT Ye gntn') from dual
+select length('wethjHTYegntn') from dual
+select substr('wethjHTYegntn',3) from dual
+select instr('ankitgoyal','a',1 ,2) from dual
+select lpad('100we',10,'*') from dual
+select trim('*' from '**WRG**weth****') from dual

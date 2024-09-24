@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+        body{
+            background-color: rgba(255, 166, 0, 0.158);
+        }
+        button { 
+            margin: 3px;
+            background-color: rgba(51, 50, 49, 0.856);
+			width: 60px; 
+			height: 40px; 
+			font-size: 30px; 
+            color:orange;
+		}
+    </style>
+    <script>
+        // var a=23;
+        // var b=45;
+        // var c=a+b;
+        // document.write(c+"<br>");
+        // document.write(typeof a+"<br>");
+
+
+        // let x="be";
+        // // let x="not";
+        // document.write(x+"<br>");
+        // document.write(typeof x+"<br>");
+
+        // const y=23;
+        // // y=45;
+        // document.write(y+"<br>");
+        
+        // var arr=["ankit",23,56,77,96,90];
+        // document.write(typeof arr+"<br>");
+
+        // var z,i=true;
+        // document.write(typeof z+"<br>");
+        // document.write(typeof i+"<br>");
+
+        // if(a>20)
+        //     document.write("a is greater");
+        // else
+        //     document.write("a is lesser");
+        // function test(a,b)
+        // {
+        //     if(a==0&&b==0)
+        //     {
+        //         document.getElementById("ans").innerHTML="Don't be so lazy.Please give some input.";
+        //         return 0;
+        //     }
+        //     return 1;
+        // }
+        // function addition()
+        // {
+        //     var a=Number(document.getElementById("number_a").value);
+        //     var b=Number(document.getElementById("number_b").value);
+        //     if(test(a,b))
+        //     {
+        //         console.log("a="+a);
+        //         console.log("b="+b);
+        //         var c=a+b;
+        //         document.getElementById("ans").innerHTML="Answer is "+c;
+        //     }
+        // }
+        // function subtraction()
+        // {
+        //     var a=Number(document.getElementById("number_a").value);
+        //     var b=Number(document.getElementById("number_b").value);
+        //     if(test(a,b))
+        //     {
+        //         console.log("a="+a);
+        //         console.log("b="+b);
+        //         var c=a-b;
+        //         document.getElementById("ans").innerHTML="Answer is "+c;
+        //     }
+        // }
+        // function multiply()
+        // {
+        //     var a=Number(document.getElementById("number_a").value);
+        //     var b=Number(document.getElementById("number_b").value);
+        //     if(test(a,b))
+        //     {
+        //         console.log("a="+a);
+        //         console.log("b="+b);
+        //         var c=a*b;
+        //         document.getElementById("ans").innerHTML="Answer is "+c;
+        //     }
+        // }
+        // function divide()
+        // {
+        //     var a=Number(document.getElementById("number_a").value);
+        //     var b=Number(document.getElementById("number_b").value);
+        //     if(test(a,b))
+        //     {
+        //         console.log("a="+a);
+        //         console.log("b="+b);
+        //         if(b==0)
+        //             document.getElementById("ans").innerHTML="Have you lost your mind!"
+        //         else
+        //         {
+        //              var c=a/b;
+        //             document.getElementById("ans").innerHTML="Answer is "+c;
+        //         }
+        //     }
+        // }
+        function cal(symbol)
+        {
+            var a=Number(document.getElementById("number_a").value);
+            a='('+a+symbol;
+            calculate(a);
+        }
+        function calculate(a)
+        {
+            var b=Number(document.getElementById("number_b").value);
+            a=a+b+')';
+            document.getElementById("ans").innerHTML="Answer is "+eval(a);
+        }
+    </script>
+</head>
+<body>
+    <a href="home page.html">Go Back</a><br><br>
+    <h2><i>Scientific Calculator</i></h2>
+    <p style="font-size: 12px;margin-left: 15px;">*If only one operand is required then use Second Number.</p>
+    <label for="number_a" style="margin: 20px; padding-right: 17px;">First Number</label>
+    <input type="text" id="number_a" value="0"><br><br>
+    <label for="number_b" style="margin: 20px;" >Second Number</label>
+    <input type="text" id="number_b" value="0"><br>
+    <p style="font-size: 10px;"></p>
+    
+
+    <table style="background-color:rgba(192, 175, 120, 0.781);margin: 25px;">
+        <tr >
+            <td><button type="button" onclick="cal('+')">+</button></td>
+            <td><button type="button" onclick="cal('-')">-</button></td>
+            <td><button type="button" onclick="cal('*')">*</button></td>
+            <td><button type="button" onclick="cal('/')">/</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="calculate('Math.sin(')" >sin</button></td>
+            <td><button type="button" onclick="calculate('Math.cos(')" >cos</button></td>
+            <td><button type="button" onclick="calculate('Math.tan(')" >tan</button></td>
+            <td><button type="button" onclick="cal('%')" >%</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="calculate('Math.exp(')">exp</button></td>
+            <td><button type="button" onclick="calculate('Math.sqrt(')">sqrt</button></td>
+            <td><button type="button" onclick="calculate('Math.log(')">log</button></td>
+            <td><button type="button" onclick="cal('**')">^</button></td>
+        </tr>
+    </table>
+    <p id="ans" style="font-size: 20px;">Answer will be shown here.</p>
+</body>
+</html>

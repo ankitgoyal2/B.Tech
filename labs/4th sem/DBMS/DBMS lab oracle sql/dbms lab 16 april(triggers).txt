@@ -1,0 +1,20 @@
+create or replace trigger display
+before delete or insert or update on emp 
+for each row 
+when (new.id > 0) 
+declare 
+   sal_diff number; 
+begin
+   sal_diff := :new.salary  - :old.salary; 
+   dbms_output.put_line('Old salary: ' || :OLD.salary); 
+   dbms_output.put_line('New salary: ' || :NEW.salary); 
+   dbms_output.put_line('Salary difference: ' || sal_diff); 
+end; 
+
+
+
+create table emp(id number(8),salary number(6))
+insert into emp values(23,54684)
+insert into emp values(3,54564)
+desc emp
+drop table emp

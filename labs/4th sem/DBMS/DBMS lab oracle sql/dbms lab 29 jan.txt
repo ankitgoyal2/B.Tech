@@ -1,0 +1,24 @@
+create table emp(id number(6), name varchar(10),salary number(6),address varchar(10))
+desc emp
+insert into emp values(:id,:name,:salary,:address)
+select * from emp 
+drop table emp
+
+create table dep(name varchar(10),fund number(8),id number(6))
+desc dep
+insert into dep values(:name,:fund,:id)
+insert into dep values('ankit',23000,11)
+select * from dep
+select * from dep where id !=11
+delete from dep where fund=11
+drop table dep
+
+create table xy(name varchar(10),amount number(6),id number(5))
+insert into xy values(:name,:amount,:id)
+select * from xy
+drop table xy
+select * from dep where name like 'a%'
+select * from dep where name like '%e%'
+select * from dep where name like '_c_'
+select max(fund) from dep where fund <(select max(fund) from dep) 
+select * from xy union all select * from dep

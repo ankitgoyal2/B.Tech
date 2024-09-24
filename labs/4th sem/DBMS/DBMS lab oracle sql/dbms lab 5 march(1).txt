@@ -1,0 +1,11 @@
+create table salesman(s_id number(7),name varchar(10),city varchar(10),commission number(3,2))
+desc salesman
+insert into salesman values()
+select * from salesman
+drop table salesman
+
+
+create table customer(c_id number(7),name varchar(10),city varchar(10),s_id number(7),grade varchar(1))
+desc customer
+select * from customer
+drop table customer

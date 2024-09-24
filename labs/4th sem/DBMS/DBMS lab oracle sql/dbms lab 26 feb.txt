@@ -1,0 +1,42 @@
+create table a(id number(6), salary number(6))
+create table b(id number(6) primary key, name varchar(10))
+desc a
+desc b
+insert into a values(:id,:salary)
+insert into b values(:id,:name)
+insert into b values(21,'ankit')
+insert into b values(34,'dkjl')
+select * from a
+select * from b 
+drop table a
+drop table b
+
+select * from a,b where a.id=b.id 
+select * from a join b on a.id=b.id  
+select * from a inner join b on a.id=b.id              //// for inner join (use on keyword)
+
+select * from a left outer join b on a.id=b.id
+
+select * from a right outer join b on a.id=b.id
+
+
+select * from a full outer join b on a.id=b.id         ////for outer join (use 'on' and 'full' keyword)
+
+
+create table emp (emp_id number(6) check(emp_id>10),age number(6)  default (50))
+desc emp
+insert into emp values('21','34')
+insert into emp (emp_id) values('21')
+insert into emp values('6','23')
+insert into emp values('17','37')
+select * from emp
+drop table emp
+
+create table emp (emp_id number(6) check(emp_id>10),id references b(id))
+insert into emp values(43,21)
+insert into emp values(23,37)
+ 
+
+
+create user ankit identified by 123ank                    //not working
+

@@ -1,0 +1,6 @@
+dataset <- read_excel("LAB6.xlsx")
+summary(dataset)
+hist(dataset$X)
+plot(Y~X, data=dataset)
+dataset.lm <- lm(Y~X, dataset)
+summary(dataset.lm)

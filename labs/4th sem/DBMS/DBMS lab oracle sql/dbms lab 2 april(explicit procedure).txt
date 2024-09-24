@@ -1,0 +1,8 @@
+create or replace procedure greeting2 is
+begin 
+dbms_output.put_line('hello');
+end;
+
+begin
+greeting2;
+end;

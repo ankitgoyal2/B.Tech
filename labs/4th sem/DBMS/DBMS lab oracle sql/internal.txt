@@ -1,0 +1,54 @@
+create table salesman(s_id number(6),name varchar(10),city varchar(10),comm number(6))
+create table customer(c_id number(6),name1 varchar(10),city1 varchar(10),grade number(10),sal_id number(10))
+
+insert into salesman values(23,'a','delhi',10)
+
+insert into salesman values(45,'b','kota',14)
+
+insert into salesman values(34,'c','jaipur',8)
+
+insert into customer values(102,'z','delhi',3,23)
+insert into customer values(106,'y','jalandhar',2,34)
+insert into customer values(119,'x','delhi',1,45)
+select * from customer
+select * from salesman
+drop table customer
+
+select name,name1,city from salesman natural join customer 
+where city=city1
+
+
+select name1 from salesman natural join customer 
+where comm>12 and s_id=sal_id
+drop table orders
+create table orders(o_no number(6),p_amount number(6),o_date date,cu_id number(6),sa_id number(6))
+
+insert into orders values(345,2435,'23-jan-19',102,23)
+insert into orders values(657,4500,'10-mar-19',106,34)
+
+insert into orders values(300,5000,'23-dec-19',106,23)
+
+select max(p_amount) from orders
+
+
+select max(p_amount) from orders
+group by cu_id;
+
+
+declare 
+c number;
+b number;
+procedure pro(x in number,y out number) as
+begin
+y:=1;
+b:=x;
+while b>0
+loop
+y:=y*b;
+b:=b-1;
+end loop;
+end;
+begin
+pro(5,c);
+dbms_output.put_line(c);
+end;

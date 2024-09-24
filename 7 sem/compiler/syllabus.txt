@@ -1,0 +1,24 @@
+Dear Students,
+I have sent individual ppts of all units as well as one combine pdf for all units. Its your choice you can refer individual ppts or some topics from compiler design pdf as well.
+Now i am giving you some important topics for your convenience.
+
+1. From the units compiler structure, lexical analysis and syntax analysis  cover all topics do more practice on 
+   top down parsing and bottom up parsing and its types. except lex and YACC.
+
+2. From  the unit syntax directed definitions cover only inherited and synthesized attributes and L and S attribute only.
+
+3. From type checking cover only type conversion, Overloading Functions & Operators and polymorphic functions.
+
+4. Symbol table and its data structure and its management , storage allocation strategies, storage organization methods, 
+   activation tree and activation record, & parameter passing. 
+
+5. Code generation and instruction selection: all are important and from intermediate code generation cover only different
+   types of intermediate code  notation like postfix notation, syntax tree, Quadruples and triples and indirect triples.
+
+I already reduce many contents like  type checking and intermediate code
+
+
+
+parser, phases of parser
+related to c, c++ topics for theory
+type checking (important), static and dynamic algo,call by reference,function overloading
